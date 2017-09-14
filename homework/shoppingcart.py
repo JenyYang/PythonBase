@@ -33,6 +33,7 @@ if total_pay > total:#总价超过总资产
     print("资产不足，不能购买")
 else:
     print("购买成功！")
+#附加功能 充值 删除购物车
 
 
 
