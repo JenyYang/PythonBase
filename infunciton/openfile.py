@@ -32,9 +32,15 @@ python3特性：文件可以字节方式打开 rb 只读 以字节形式读取
 
 #文件操作
 #复制文件  使用with 打开文件 不必手动关闭文件 将会自动给关闭 还可以同时 打开两个文件 在大文件复制中大大的解决了内存占用过大的问题
-with open("file.txt","r",encoding="utf-8") as f1,open("cfile.txt","w",encoding="utf-8") as f2:
-    for line in f1:
-        print(line)
-        f2.write(line)
-        f2.flush()#将内存中的内容刷到硬盘上
+# with open("file.txt","r",encoding="utf-8") as f1,open("cfile.txt","w",encoding="utf-8") as f2:
+#     for line in f1:
+#         print(line)
+#         f2.write(line)
+#         f2.flush()#将内存中的内容刷到硬盘上
 
+with open("file.txt","r+") as f:
+    data=f.read()
+    # # print(data)
+    # print(f.tell())
+    # f.seek(2)
+    f.write("ggg")
