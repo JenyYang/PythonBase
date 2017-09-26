@@ -1,7 +1,8 @@
 #! /user/bin/python/
 # -*-coding:utf-8 -*-
-import random
+
 #获取一个任意位数的随机验证码
+import random
 def getrandomcode(args):
     temp=""
     for i in range(args):
