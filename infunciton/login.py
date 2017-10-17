@@ -1,6 +1,7 @@
 #!/user/bin/pyhton/
 # -*-coding:utf-8 -*-
 
+#登录方法
 def tologin(username,password):
     """
     :param username: 用户名
@@ -21,3 +22,6 @@ if flag:
     print("登录成功")
 else:
     print("登录失败")
+
+# def toregister(username,password):
+#

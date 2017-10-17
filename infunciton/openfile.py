@@ -40,7 +40,7 @@ python3特性：文件可以字节方式打开 rb 只读 以字节形式读取
 
 with open("file.txt","r+") as f:
     data=f.read()
-    # # print(data)
-    # print(f.tell())
-    # f.seek(2)
+    # print(data)
+    print(f.tell())
+    f.seek(2)
     f.write("ggg")
