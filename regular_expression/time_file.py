@@ -9,6 +9,21 @@ time 模块:
 datetime :
 
 lib下的site-packages  存放所有第三方的库
-sys模块：
+sys模块：解释器相关的操作
     1、sys.exit(n) 退出程序  退出程序可以直接用exit(信息)  正常退出n=0
+    2、sys.path.append(路径) 添加导入路径
+ os模块：提供系统相关的操作
+    os.path.join(path1,...)将多个路径组合返回，拼接路径
+    os.stat(路径/文件名) 获取文件或目录信息
+
+hashlib加密：代替md5和sha模块，主要提供了SHA1，SHA224，SHA256，SHA384，SHA512，MD5算法
+
 """
+
+# md5加密不能反解
+import hashlib
+import time
+
+hash_md5 = hashlib.md5(bytes(str(time.time()), encoding="utf-8"))
+hash_md5.update(bytes("yang", encoding="utf-8"))
+print(hash_md5.hexdigest())
