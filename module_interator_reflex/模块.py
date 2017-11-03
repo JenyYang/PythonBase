@@ -64,6 +64,6 @@ requests模块：
 response = requests.get("http://www.weather.com.cn/adat/sk/101010500.html")
 response.encoding = "utf-8"  # 指定编码格式
 result = response.text  # 获取返回的数据内容
-dic_result = json.loads(result)
+dic_result = json.loads(result)#loads方法字符串内部必须是双引号
 print(result)
 print(dic_result)
