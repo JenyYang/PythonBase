@@ -8,6 +8,7 @@ port=("127.0.0.1",8055)
 sk=socket.socket()
 sk.connect(port)
 ret=sk.recv(1024)
+sk.sendall("开始吧")
 total_size=int(ret)
 f=open("new.png","wb")
 has_size=0
