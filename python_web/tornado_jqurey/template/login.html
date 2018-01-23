@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+<body>
+        <input type="text" name="name" id="name"/>
+        <input type="password" name="pwd" id="pwd"/>
+        <input type="button" value="登录" onclick="Submit()"><span style="color: red">{{status}}</span>
+        <script>
+            var xrh
+            function Submit() {
+                xrh=new XMLHttpRequest()
+                var name=document.getElementById("name").value
+                var pwd=document.getElementById("pwd").value
+//                var dataform=new FormData()
+//                dataform.append("name",)
+                xrh.open("POST","/login",true)
+                xrh.setRequestHeader("content-type","application/x-www-form-urlencoded")
+                xrh.onreadystatechange=fuca
+                xrh.send("name="+name+";pwd="+pwd)
+            }
+            function fuca() {
+                console.log(xrh.responseText)
+            }
+        </script>
+</body>
+</html>

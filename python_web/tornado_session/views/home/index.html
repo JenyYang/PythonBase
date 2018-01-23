@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pages a {
+            display: inline-block;
+            background-color: #00b3ee;
+            border: 1px;
+            solid-color: grey;
+            padding: 2px;
+            margin: 3px;
+        }
+        .pages a.click_style{
+            background-color: red;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<h2>首页</h2>
+<form method="post" action="/index/{{current_page}}">
+    <input type="text" name="name"/>
+    <input type="text" name="email"/>
+    <input type="submit" value="提交"/>
+
+</form>
+<h1>展示数据</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>用户名</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    {% for item in list_info %}
+    <tr>
+        <td>{{item["name"]}}</td>
+        <td>{{item["email"]}}</td>
+    </tr>
+    {% end %}
+
+</table>
+
+<div class="pages">
+    {% raw page_str %}
+</div>
+
+</body>
+</html>
